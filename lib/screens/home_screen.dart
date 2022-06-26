@@ -1,5 +1,7 @@
+import 'package:e_commerce_app/providers/products_provider.dart';
 import 'package:e_commerce_app/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/grid_view_builder.dart';
 
@@ -13,7 +15,9 @@ class HomeScreen extends StatelessWidget {
         title: Text("Categories"),
       ),
       drawer: MainDrawer(),
-      body: GridViewBuilder(),
+      body: ChangeNotifierProvider(
+          create: (BuildContext context)=>Products(),
+          child: GridViewBuilder(catId: "c31003c19bc840dbbd329d5af753079f",),),
     );
   }
 }
