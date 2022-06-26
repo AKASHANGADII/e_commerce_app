@@ -1,4 +1,6 @@
 import 'package:e_commerce_app/providers/Categories_provider.dart';
+import 'package:e_commerce_app/providers/cart_provider.dart';
+import 'package:e_commerce_app/screens/cart_screen.dart';
 import 'package:e_commerce_app/screens/products_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +26,14 @@ class MainDrawer extends StatelessWidget {
           ),
           SizedBox(
             height: 10,
+          ),
+          GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, CartScreen.routeName);
+            },
+            child: Container(
+              child: Text("My Cart"),
+            ),
           ),
           Container(
             width: double.infinity,

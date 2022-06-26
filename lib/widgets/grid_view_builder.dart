@@ -17,13 +17,13 @@ class GridViewBuilder extends StatelessWidget {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 2 / 5,
+          childAspectRatio: 2 / 4,
           mainAxisSpacing: 15,
           crossAxisSpacing: 15),
       itemCount: loadedProducts.length,
       itemBuilder: (context, i) => GestureDetector(
         onTap: (){
-          Navigator.pushNamed(context, ProductDetailScreen.routeName,arguments: [loadedProducts[i].title,loadedProducts[i].imageUrl,loadedProducts[i].discription,loadedProducts[i].price]);
+          Navigator.pushNamed(context, ProductDetailScreen.routeName,arguments: [loadedProducts[i].title,loadedProducts[i].imageUrl,loadedProducts[i].discription,loadedProducts[i].price,loadedProducts[i].productId]);
         },
         child: GridTile(
           footer: Container(

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/providers/categories.dart';
+import 'package:e_commerce_app/widgets/categories.dart';
 import 'package:flutter/material.dart';
 
 class Categories with ChangeNotifier{
